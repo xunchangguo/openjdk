@@ -31,19 +31,19 @@ ENV LANG en_US.UTF-8
 # >
 # > Java Development Kit builds, from Oracle
 # >
-ENV JAVA_VERSION 20-ea+33
+ENV JAVA_VERSION 20
 
 RUN set -eux; \
 	\
 	arch="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; \
 	case "$arch" in \
 		'i386:x86-64') \
-			downloadUrl='https://download.java.net/java/early_access/jdk20/33/GPL/openjdk-20-ea+33_linux-x64_bin.tar.gz'; \
-			downloadSha256='60a22410863626139939d3bcbb04c01d8aafaf666c8a61532ec7fa6d5a3f90b3'; \
+			downloadUrl='https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_linux-x64_bin.tar.gz'; \
+			downloadSha256='bb863b2d542976d1ae4b7b81af3e78b1e4247a64644350b552d298d8dc5980dc'; \
 			;; \
 		'aarch64') \
-			downloadUrl='https://download.java.net/java/early_access/jdk20/33/GPL/openjdk-20-ea+33_linux-aarch64_bin.tar.gz'; \
-			downloadSha256='cd944c1f8b593e18f863d36262b710bcaccf05f28c4a02a6cf01d3ad7fcc2f68'; \
+			downloadUrl='https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_linux-aarch64_bin.tar.gz'; \
+			downloadSha256='b671dd1513e7bd4f3de6b1424a90a4998997a67593bf259936d55f5e83e31959'; \
 			;; \
 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; \
 	esac; \
