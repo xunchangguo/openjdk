@@ -95,8 +95,7 @@ for version in "${versions[@]}"; do
 	export version
 	doc='{}'
 	possibleArches=(
-		# https://jdk.java.net/20/
-		# https://jdk.java.net/21/
+		# https://jdk.java.net/23/
 		'linux-aarch64'
 		'linux-x64'
 		'linux-x64-musl'
@@ -151,24 +150,29 @@ for version in "${versions[@]}"; do
 		.[env.version] = $doc + {
 			variants: [
 				(
+					"9",
 					"8",
-					"7"
+					empty
 				| "oraclelinux" + .),
 				(
+					"bookworm",
 					"bullseye",
-					"buster"
+					empty
 				| ., "slim-" + .),
 				if $doc.alpine then
-					"3.17",
-					"3.16"
+					"3.19",
+					"3.18",
+					empty
 				| "alpine" + . else empty end,
 				if $doc.jdk.arches | keys | any(startswith("windows-")) then
 					(
 						"ltsc2022",
-						"1809"
+						"1809",
+						empty
 					| "windows/windowsservercore-" + .),
 					(
-						"1809"
+						"1809",
+						empty
 					| "windows/nanoserver-" + .)
 				else empty end
 			],

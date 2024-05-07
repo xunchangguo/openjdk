@@ -1,62 +1,32 @@
 {
-  "20": {
+  "23": {
     "jdk": {
       "arches": {
         "amd64": {
-          "sha256": "bb863b2d542976d1ae4b7b81af3e78b1e4247a64644350b552d298d8dc5980dc",
-          "url": "https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_linux-x64_bin.tar.gz"
+          "sha256": "20f3d065d5757feeac026eba758dd431f1343b5087c7f0f03ef8bbd2fa606bd4",
+          "url": "https://download.java.net/java/early_access/jdk23/21/GPL/openjdk-23-ea+21_linux-x64_bin.tar.gz"
         },
         "arm64v8": {
-          "sha256": "b671dd1513e7bd4f3de6b1424a90a4998997a67593bf259936d55f5e83e31959",
-          "url": "https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_linux-aarch64_bin.tar.gz"
+          "sha256": "33a4798e59e479514004a62ec1863207430915212696689ea072cd7ad0b5d15c",
+          "url": "https://download.java.net/java/early_access/jdk23/21/GPL/openjdk-23-ea+21_linux-aarch64_bin.tar.gz"
         },
         "windows-amd64": {
-          "sha256": "c92fae5e42b9aecf444a66c8ec563c652f60b1e231dfdd33a4f5a3e3603058fb",
-          "url": "https://download.java.net/java/GA/jdk20/bdc68b4b9cbc4ebcb30745c85038d91d/36/GPL/openjdk-20_windows-x64_bin.zip"
+          "sha256": "c98243a78a073b3efebfce22fb6ecfd0dd918c983fb0812e40259405e02ee2a0",
+          "url": "https://download.java.net/java/early_access/jdk23/21/GPL/openjdk-23-ea+21_windows-x64_bin.zip"
         }
       }
     },
     "variants": [
+      "oraclelinux9",
       "oraclelinux8",
-      "oraclelinux7",
+      "bookworm",
+      "slim-bookworm",
       "bullseye",
       "slim-bullseye",
-      "buster",
-      "slim-buster",
       "windows/windowsservercore-ltsc2022",
       "windows/windowsservercore-1809",
       "windows/nanoserver-1809"
     ],
-    "version": "20"
-  },
-  "21": {
-    "jdk": {
-      "arches": {
-        "amd64": {
-          "sha256": "da247094c9b9e7b4ab18b5e36adc89e3b7f6ee77192816ce059b933e23e09fca",
-          "url": "https://download.java.net/java/early_access/jdk21/12/GPL/openjdk-21-ea+12_linux-x64_bin.tar.gz"
-        },
-        "arm64v8": {
-          "sha256": "ea0bf5244a8b27f1c111cb40cb161186c9217f0bbc31e3a019b81c21505c8f18",
-          "url": "https://download.java.net/java/early_access/jdk21/12/GPL/openjdk-21-ea+12_linux-aarch64_bin.tar.gz"
-        },
-        "windows-amd64": {
-          "sha256": "8ecc99163cee3dc93779d640a0aa1308e044c144a1f3c13ab3dfc48c4bfd0419",
-          "url": "https://download.java.net/java/early_access/jdk21/12/GPL/openjdk-21-ea+12_windows-x64_bin.zip"
-        }
-      }
-    },
-    "variants": [
-      "oraclelinux8",
-      "oraclelinux7",
-      "bullseye",
-      "slim-bullseye",
-      "buster",
-      "slim-buster",
-      "windows/windowsservercore-ltsc2022",
-      "windows/windowsservercore-1809",
-      "windows/nanoserver-1809"
-    ],
-    "version": "21-ea+12"
+    "version": "23-ea+21"
   }
 }
